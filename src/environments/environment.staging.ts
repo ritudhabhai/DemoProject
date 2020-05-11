@@ -1,6 +1,6 @@
 export const environment = {
     production: true,
     environmentName: 'staging',
-    port: 4046,
+    port: 4074,
     apiUrl: '',
 };
