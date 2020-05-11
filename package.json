@@ -8,9 +8,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run angular-front-v9:serve-ssr",
-    "serve:ssr": "node dist/angular-front-v9/server/main.js",
-    "build": "ng build --prod && ng run angular-front-v9:server:production && node dist/angular-front-v9/server/main.js",
-    "staging": "ng build --configuration='staging' && ng run angular-front-v9:server:staging && node dist/angular-front-v9/server/main.js",
+    "serve:ssr": "node dist/server/main.js",
+    "build": "ng build --prod && ng run angular-front-v9:server:production && node dist/server/main.js",
+    "staging": "ng build --configuration='staging' && ng run angular-front-v9:server:staging && node dist/server/main.js",
     "prerender": "ng run angular-front-v9:prerender"
   },
   "private": true,
