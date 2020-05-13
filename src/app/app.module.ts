@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 // Routing
 import { AppRoutingModule } from './app-routing.module';
 
+// Shared
+import { SharedModule } from './shared/shared/shared.module';
+
 // Component
 import { AppComponent } from './app.component';
 
@@ -12,6 +15,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
+    SharedModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule
   ],

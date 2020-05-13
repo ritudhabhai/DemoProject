@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
+import { URLConstants } from '../../../common/constants/routerLink-constants';
 
 @Component({
 	selector: 'app-header',
@@ -6,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 	styles: [],
 })
 export class HeaderComponent implements OnInit {
-
-	constructor() {
+	URLConstants = URLConstants;
+	constructor(public router: Router) {
 	}
 
 	ngOnInit() { }

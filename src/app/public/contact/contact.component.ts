@@ -7,19 +7,18 @@ import { URLConstants } from '../../common/constants/routerLink-constants';
 import { MetaDataService } from '../../common/services/service/meta-data.service';
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
   styles: [
   ]
 })
-export class HomePageComponent implements OnInit {
+export class ContactComponent implements OnInit {
   URLConstants = URLConstants;
 
   constructor(private metaDataService: MetaDataService) { }
 
   ngOnInit() {
-    this.metaDataService.setMetaData(this.URLConstants.HOMEPAGE);
+    this.metaDataService.setMetaData(this.URLConstants.CONTACT);
   }
-
 
 }
