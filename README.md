@@ -78,7 +78,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 > Open AWS EC2 Server & run start pm2 instance:
 
-> $ pm2 start dist/server.js --name="ng9FrontSeed"
+> $ pm2 start dist/server/main.js --name="ng9FrontSeed"
 
 ------------
 
