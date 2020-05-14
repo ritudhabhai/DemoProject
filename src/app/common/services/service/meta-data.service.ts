@@ -21,22 +21,38 @@ export class MetaDataService {
 /******************************************************************/
   setMetaData(page) {
     if (page === this.URLConstants.ABOUT) {
-      this.title.setTitle(this.MetaConstants.meta_data_about.title);
-      this.meta.updateTag({ name: 'keywords', content: this.MetaConstants.meta_data_about.keywords });
-      this.meta.updateTag({ name: 'description', content: this.MetaConstants.meta_data_about.description });
+      this.setMeta(
+        this.MetaConstants.meta_data_about.title,
+        this.MetaConstants.meta_data_about.keywords,
+        this.MetaConstants.meta_data_about.description);
     } else if (page === this.URLConstants.CONTACT) {
-      this.title.setTitle(this.MetaConstants.meta_data_contact.title);
-      this.meta.updateTag({ name: 'keywords', content: this.MetaConstants.meta_data_contact.keywords });
-      this.meta.updateTag({ name: 'description', content: this.MetaConstants.meta_data_contact.description });
+      this.setMeta(
+        this.MetaConstants.meta_data_contact.title,
+        this.MetaConstants.meta_data_contact.keywords,
+        this.MetaConstants.meta_data_contact.description);
     } else if (page === this.URLConstants.SERVICE) {
-      this.title.setTitle(this.MetaConstants.meta_data_service.title);
-      this.meta.updateTag({ name: 'keywords', content: this.MetaConstants.meta_data_service.keywords });
-      this.meta.updateTag({ name: 'description', content: this.MetaConstants.meta_data_service.description });
+      this.setMeta(
+        this.MetaConstants.meta_data_service.title,
+        this.MetaConstants.meta_data_service.keywords,
+        this.MetaConstants.meta_data_service.description);
     } else if (page === this.URLConstants.HOMEPAGE) {
-      this.title.setTitle(this.MetaConstants.meta_data_home.title);
-      this.meta.updateTag({ name: 'keywords', content: this.MetaConstants.meta_data_home.keywords });
-      this.meta.updateTag({ name: 'description', content: this.MetaConstants.meta_data_home.description });
+      this.setMeta(
+        this.MetaConstants.meta_data_home.title,
+        this.MetaConstants.meta_data_home.keywords,
+        this.MetaConstants.meta_data_home.description);
     }
+  }
+  /******************************************************************/
+
+  /***********************************************************************
+  @PURPOSE      : Common Function to Set Meta Title, Keywords & Description
+  @PARAMETERS   : metaTitle, metaKeywords, metaDescription
+  @RETURN       : NA
+  /***********************************************************************/
+  setMeta(metaTitle, metaKeywords, metaDescription) {
+    this.title.setTitle(metaTitle);
+    this.meta.updateTag({ name: 'keywords', content: metaKeywords });
+    this.meta.updateTag({ name: 'description', content: metaDescription });
   }
   /******************************************************************/
 }
