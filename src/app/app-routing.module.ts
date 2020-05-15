@@ -7,6 +7,8 @@ const routes: Routes = [
   { path: 'about', loadChildren: () => import('./public/about/about.module').then((m) => m.AboutModule) },
   { path: 'contact', loadChildren: () => import('./public/contact/contact.module').then((m) => m.ContactModule) },
   { path: 'service', loadChildren: () => import('./public/service/service.module').then((m) => m.ServiceModule) },
+  { path: 'login', loadChildren: () => import('./public/login/login.module').then((m) => m.LoginModule) },
+  { path: 'register', loadChildren: () => import('./public/register/register.module').then((m) => m.RegisterModule) },
   { path: '**', redirectTo: 'home-page' }
 ];
 

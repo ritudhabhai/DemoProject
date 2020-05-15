@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+
+// Constants
 import { URLConstants } from '../../../common/constants/routerLink-constants';
 
 @Component({

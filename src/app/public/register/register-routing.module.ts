@@ -5,14 +5,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared/shared/shared.module';
 
 // Component
-import { LoginComponent } from './login.component';
+import { RegisterComponent } from './register.component';
 
 
-const routes: Routes = [{ path: '', component: LoginComponent }];
+const routes: Routes = [{ path: '', component: RegisterComponent }];
 
 @NgModule({
   imports: [SharedModule, RouterModule.forChild(routes)],
   exports: [RouterModule],
-  declarations: [LoginComponent]
+  declarations: [RegisterComponent]
 })
-export class LoginRoutingModule { }
+export class RegisterRoutingModule { }

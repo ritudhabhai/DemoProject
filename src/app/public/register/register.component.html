@@ -1,6 +1,10 @@
 <div class="cont">
     <div class="form sign-in">
-        <h2>Welcome back,</h2>
+        <h2>Time to feel like home,</h2>
+        <label>
+            <span>Name</span>
+            <input type="text" />
+        </label>
         <label>
             <span>Email</span>
             <input type="email" />
@@ -9,10 +13,9 @@
             <span>Password</span>
             <input type="password" />
         </label>
-        <p class="forgot-pass">Forgot password?</p>
-        <button type="button" class="submit">Login</button>
+        <button type="button" class="submit">Register</button>
 
-        <div class="text-center pt-4 pb-3">
+        <div class="text-center pt-2 pb-2">
             <span class="txt1">
                 Or login with
             </span>
@@ -28,15 +31,16 @@
                 <i class="fa fa-twitter"></i>
             </a>
         </div>
+
     </div>
     <div class="sub-cont">
         <div class="img">
             <div class="img__text m--up">
-                <h2>New here?</h2>
-                <p>Sign up and discover great amount of new opportunities!</p>
+                <h2>One of us?</h2>
+                <p>If you already has an account, just sign in. We've missed you!</p>
             </div>
-            <div class="img__btn" [routerLink]="[URLConstants.REGISTER]">
-                <span class="m--up">Register</span>
+            <div class="img__btn" [routerLink]="[URLConstants.LOGIN]">
+                <span class="m--up">Login</span>
             </div>
         </div>
     </div>
