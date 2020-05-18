@@ -1,14 +1,13 @@
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { APP_ID, Injectable, Injector, PLATFORM_ID } from '@angular/core';
 import {
   ActivatedRouteSnapshot, CanActivate,
   CanActivateChild, CanDeactivate, CanLoad, Router, RouterStateSnapshot,
 } from '@angular/router';
 
-// constants
+// Constants
 import { URLConstants } from '../../constants/routerLink-constants';
 
-// service
+// Service
 import { LocalStorageService } from '../service/local-storage.service';
 
 /****************************************************************************

@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   environmentName: 'dev',
   port: 5074,
-  apiUrl: '',
+  apiUrl: 'http://10.2.99.23:4000/api/',
 };
 
 /*
