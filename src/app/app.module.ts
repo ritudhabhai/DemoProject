@@ -22,11 +22,11 @@ import { AppComponent } from './app.component';
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider('528961187921-ld24b25466u4t2lacn9r35asg000lfis.apps.googleusercontent.com')
+    provider: new GoogleLoginProvider('273288607293-ghj1l1rv4hfblurh9um10t3v5vedg58o.apps.googleusercontent.com')
   },
   {
     id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider('561602290896109')
+    provider: new FacebookLoginProvider('1163955660625262')
   },
   // {
   //   id: LinkedInLoginProvider.PROVIDER_ID,
