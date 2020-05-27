@@ -1,6 +1,22 @@
 <!-- header -->
 <app-header></app-header>
 <!-- header -->
+<div id="Common-intro" class="pt-2"
+    *ngIf="router.url.includes(URLConstants.ABOUT) || router.url.includes(URLConstants.SERVICE) || router.url.includes(URLConstants.CONTACT)">
+    <div class="container-fluid d-flex justify-content-center text-white">
+        <div class="row d-flex justify-content-center text-center mt-5">
+            <div class="col-md-10">
+                <h2 class="display-4 font-weight-bold white-text mb-2">
+                    {{router.url.includes(URLConstants.SERVICE) ? 'Services' : (router.url.includes(URLConstants.CONTACT) ? 'Contact us' : (router.url.includes(URLConstants.ABOUT) ? 'About us' : 'Travel'))}}
+                </h2>
+                <hr class="hr-light">
+                <h4 class="white-text my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Deleniti
+                    consequuntur.</h4>
+            </div>
+        </div>
+    </div>
+</div>
 <router-outlet></router-outlet>
 <!-- footer -->
 <app-footer></app-footer>
