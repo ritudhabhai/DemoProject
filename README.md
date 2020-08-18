@@ -1,6 +1,6 @@
 # Angular-Front-seed-v9 
 
-## Prequisites (Development):
+## Prequisites (Development)
 
 | Module      | Version |
 | ----------- | ------- |
@@ -12,15 +12,8 @@
 
 ------------ 
 
-##### Take Clone of project
 
-``` bash
-> $ git clone -b dev https://gitlab.com/custom-seed/angular-front-seed-v9.git  Angular-Front-seed-v9
-```
-
------------- 
-
-##### Development Process
+## Running project in local
 
 ``` bash
 > $ npm install
@@ -32,7 +25,7 @@
 
 ------------ 
 
-##### Process to Install Sonarqube while development
+## Code Quality Check 
 
 > Download Java Version 11
 
@@ -60,20 +53,20 @@
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ------------ 
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+> Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ------------ 
 
-### Deployment Process in Staging
+## Deployment in Staging Server
 
 ``` bash
-> $ git clone -b staging https://gitlab.com/custom-seed/angular-front-seed-v9.git  Angular-Front-seed-v9
+> $ git clone -b <branchName> <gitUrl> <projectName>
 
 > $ npm install
 
@@ -83,12 +76,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 > Open Server & run start pm2 instance:
 
-> $ pm2 start dist/server/main.js --name="ng9FrontSeed"
+> $ pm2 start dist/server/main.js --name="<instance_name>"
 ```
 
 ------------
 
-### Create Build according to environments
+## Create Build For Different Environments
 
 ``` bash
 # serve with host reload at localhost:4200.
@@ -102,11 +95,31 @@ $ npm run build
 ```
 ------------
 
-### Angular Coding Standards
 
-You can get more information on angular coding stantdards from [here](https://docs.google.com/document/d/17amkymvitTGHyf9EwQtpXLbP5XD5TncjJ4RTWnj6-_w/edit).
+## Start pm2 Instance
 
-### Directory Structure
+``` bash
+$ pm2 start server.js --name="<instance_name>" (for creating)
+
+$ pm2 restart <instance_id> or <instance_name>
+
+$ pm2 delete <instance_id> or <instance_name>
+
+$ pm2 logs <instance_id> or <instance_id> (to check logs or errors)
+
+$ pm2 logs <instance_id> --lines=100 (to check particular lines of previous logs)
+
+```
+------------
+
+## Deployment With CI/CD
+> Coming Soon
+
+## Angular Coding Standards
+
+> You can get more information on angular coding stantdards from [here](https://docs.google.com/document/d/17amkymvitTGHyf9EwQtpXLbP5XD5TncjJ4RTWnj6-_w/edit).
+
+## Directory Structure
 
 ```
 Angular-Front-seed-v9/
