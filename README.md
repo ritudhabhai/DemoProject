@@ -82,6 +82,24 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ------------
 
+### Create Build according to environments
+
+``` bash
+# serve with host reload at localhost:4200.
+$ ng serve
+
+# build for staging with minification
+$ npm run staging
+
+# build for production with minification
+$ npm run build
+```
+------------
+
+### Angular Coding Standards
+
+You can get more information on angular coding stantdards from [here](https://docs.google.com/document/d/17amkymvitTGHyf9EwQtpXLbP5XD5TncjJ4RTWnj6-_w/edit).
+
 ### Directory Structure
 
 ```
@@ -113,23 +131,3 @@ Angular-Front-seed-v9/
 ```
 
 ------------
-
-### Angular Coding Standards
-
-You can get more information on angular coding stantdards from [here](https://docs.google.com/document/d/17amkymvitTGHyf9EwQtpXLbP5XD5TncjJ4RTWnj6-_w/edit).
-
-------------
-
-### Create Build according to environments
-
-``` bash
-# serve with host reload at localhost:4200.
-$ ng serve
-
-# build for staging with minification
-$ npm run staging
-
-# build for production with minification
-$ npm run build
-
----------------
