@@ -66,7 +66,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ------------ 
 
-### Deployment Process
+### Deployment Process in Staging
 
 > $ git clone -b staging https://gitlab.com/custom-seed/angular-front-seed-v9.git  Angular-Front-seed-v9
 
@@ -76,7 +76,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 > "dist" folder will be created.
 
-> Open AWS EC2 Server & run start pm2 instance:
+> Open Server & run start pm2 instance:
 
 > $ pm2 start dist/server/main.js --name="ng9FrontSeed"
 
@@ -86,7 +86,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ### Create Build according to environments
 
 ``` bash
-# serve with hot reload at localhost:4200.
+# serve with host reload at localhost:4200.
 $ ng serve
 
 # build for staging with minification
@@ -96,3 +96,33 @@ $ npm run staging
 $ npm run build
 
 ---------------
+
+## Directory Structure
+
+```
+Angular-Front-seed-v9/
+├── e2e/
+├── src/
+│   ├── app/     
+│   │   ├── common/
+│   │   │   ├── constants/
+│   │   │   ├── services/
+│   │   │   ├── pipes/
+│   │   ├── modules/
+│   │   ├── public/
+│   │   ├── shared/
+│   │   │   ├── components/
+│   │   │   ├── modals/
+│   │   │   ├── directives/
+│   ├── assets/
+│   ├── environments/
+│   ├── index.html
+│   ├── main.ts
+│   ├── main.server.ts
+│   └── ...
+├── .angular.json
+├── ...
+├── package.json
+├── server.ts
+└── ...
+```
