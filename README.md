@@ -82,6 +82,43 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ------------
 
+### Directory Structure
+
+```
+Angular-Front-seed-v9/
+|-- e2e/
+|-- src/
+    |-- app/     
+        |-- common/
+            |-- constants/
+            |-- services/
+            |-- pipes/
+        |-- modules/
+        |-- public/
+        |-- shared/
+            |-- components/
+            |-- modals/
+            |-- directives/
+    |-- assets/
+    |-- environments/
+    |-- index.html
+    |-- main.ts
+    |-- main.server.ts
+    |-- ...
+|-- .angular.json
+|-- ...
+|-- package.json
+|-- server.ts
+|-- ...
+```
+
+------------
+
+### Angular Coding Standards
+
+You can get more information on angular coding stantdards from [here](https://docs.google.com/document/d/17amkymvitTGHyf9EwQtpXLbP5XD5TncjJ4RTWnj6-_w/edit).
+
+------------
 
 ### Create Build according to environments
 
@@ -96,33 +133,3 @@ $ npm run staging
 $ npm run build
 
 ---------------
-
-## Directory Structure
-
-```
-Angular-Front-seed-v9/
-├── e2e/
-├── src/
-│   ├── app/     
-│   │   ├── common/
-│   │   │   ├── constants/
-│   │   │   ├── services/
-│   │   │   ├── pipes/
-│   │   ├── modules/
-│   │   ├── public/
-│   │   ├── shared/
-│   │   │   ├── components/
-│   │   │   ├── modals/
-│   │   │   ├── directives/
-│   ├── assets/
-│   ├── environments/
-│   ├── index.html
-│   ├── main.ts
-│   ├── main.server.ts
-│   └── ...
-├── .angular.json
-├── ...
-├── package.json
-├── server.ts
-└── ...
-```
