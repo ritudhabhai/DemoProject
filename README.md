@@ -14,17 +14,21 @@
 
 ##### Take Clone of project
 
+``` bash
 > $ git clone -b dev https://gitlab.com/custom-seed/angular-front-seed-v9.git  Angular-Front-seed-v9
+```
 
 ------------ 
 
 ##### Development Process
 
+``` bash
 > $ npm install
 
 > $ ng serve
 
 > $ npm run build
+```
 
 ------------ 
 
@@ -68,6 +72,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ### Deployment Process in Staging
 
+``` bash
 > $ git clone -b staging https://gitlab.com/custom-seed/angular-front-seed-v9.git  Angular-Front-seed-v9
 
 > $ npm install
@@ -79,6 +84,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 > Open Server & run start pm2 instance:
 
 > $ pm2 start dist/server/main.js --name="ng9FrontSeed"
+```
 
 ------------
 
