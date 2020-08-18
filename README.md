@@ -1,6 +1,6 @@
 # Angular-Front-seed-v9 
 
-## Prequisites (Development)
+## Prerequisite (Development)
 
 | Module      | Version |
 | ----------- | ------- |
