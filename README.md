@@ -16,11 +16,11 @@
 ## Running project in local
 
 ``` bash
-> $ npm install
+$ npm install
 
-> $ ng serve
+$ ng serve
 
-> $ npm run build
+$ npm run build
 ```
 
 ------------ 
@@ -66,17 +66,17 @@
 ## Deployment in Staging Server
 
 ``` bash
-> $ git clone -b <branchName> <gitUrl> <projectName>
+$ git clone -b <branchName> <gitUrl> <projectName>
 
-> $ npm install
+$ npm install
 
-> $ npm run staging
+$ npm run staging
 
-> "dist" folder will be created.
+"dist" folder will be created.
 
-> Open Server & run start pm2 instance:
+Open Server & run start pm2 instance:
 
-> $ pm2 start dist/server/main.js --name="<instance_name>"
+$ pm2 start dist/server/main.js --name="<instance_name>"
 ```
 
 ------------
