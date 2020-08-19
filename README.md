@@ -103,6 +103,8 @@ $ pm2 start server.js --name="<instance_name>" (for creating)
 
 $ pm2 restart <instance_id> or <instance_name>
 
+$ pm2 stop <instance_id> or <instance_name>
+
 $ pm2 delete <instance_id> or <instance_name>
 
 $ pm2 logs <instance_id> or <instance_id> (to check logs or errors)
