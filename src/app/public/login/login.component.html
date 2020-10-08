@@ -5,11 +5,11 @@
             <label>
                 <span>Email</span>
                 <input type="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-                    [ngClass]="((submitted || emailId.touched) && emailId.invalid)?'has-danger':''" name="emailId"
-                    #emailId=ngModel [(ngModel)]="user.emailId" autocomplete="off" required />
+                    [ngClass]="((submitted || email.touched) && email.invalid)?'has-danger':''" name="email"
+                    #email=ngModel [(ngModel)]="user.email" autocomplete="off" required />
             </label>
-            <div class="error-block m-l-160" *ngIf="((submitted || emailId.touched) && emailId.invalid)">
-                {{showErrorService.showError('emailId', emailId.errors)}}
+            <div class="error-block m-l-160" *ngIf="((submitted || email.touched) && email.invalid)">
+                {{showErrorService.showError('email', email.errors)}}
             </div>
             <label>
                 <span>Password</span>
