@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">IndiaNIC</a>
+  <a class="navbar-brand" href="javascript:;">IndiaNIC</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -10,23 +10,8 @@
       <li class="nav-item" [ngClass]="{'active': router.url.includes(URLConstants.HOMEPAGE)}">
         <a class="nav-link" [routerLink]="[URLConstants.HOMEPAGE]">Home</a>
       </li>
-      <li class="nav-item" [ngClass]="{'active': router.url.includes(URLConstants.ABOUT)}">
-        <a class="nav-link" [routerLink]="[URLConstants.ABOUT]">About</a>
-      </li>
-      <li class="nav-item" [ngClass]="{'active': router.url.includes(URLConstants.SERVICE)}">
-        <a class="nav-link" [routerLink]="[URLConstants.SERVICE]">Service</a>
-      </li>
-      <li class="nav-item" [ngClass]="{'active': router.url.includes(URLConstants.CONTACT)}">
-        <a class="nav-link" [routerLink]="[URLConstants.CONTACT]">Contact</a>
-      </li>
     </ul>
     <ul class="navbar-nav">
-      <li class="nav-item dropdown mr-3" *ngIf="!localStorageService.getToken('accessToken')">
-        <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="[URLConstants.REGISTER]">Register</button>
-      </li>
-      <li class="nav-item dropdown" *ngIf="!localStorageService.getToken('accessToken')">
-        <button class="btn btn-success my-2 my-sm-0" [routerLink]="[URLConstants.LOGIN]">Login</button>
-      </li>
       <li class=" nav-item dropdown mr-5"
         *ngIf="localStorageService.getToken('username') && localStorageService.getToken('accessToken')">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -34,9 +19,7 @@
           {{localStorageService.getToken('username')}}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <!-- <a class="dropdown-item" href="#">Profile</a>
-          <div class="dropdown-divider"></div> -->
-          <a class="dropdown-item" (click)="logoutService.logout()">Logout</a>
+          <a class="dropdown-item" href="javascript:;" (click)="logoutService.logout()">Logout</a>
         </div>
       </li>
     </ul>

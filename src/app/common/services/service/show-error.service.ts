@@ -35,13 +35,13 @@ export class ShowErrorService {
 		});
 	}
 
-	confirmpopToast(type, title) {
+	confirmpopToast(type, title, buttonName) {
 		return swal({
 			// title: 'Are you sure?',
 			text: title,
 			type,
 			showCancelButton: true,
-			confirmButtonText: 'DELETE',
+			confirmButtonText: buttonName,
 			confirmButtonClass: 'btn btn-primary',
 			cancelButtonClass: 'btn btn--outline-primary',
 		});

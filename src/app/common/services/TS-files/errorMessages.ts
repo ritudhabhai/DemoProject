@@ -22,21 +22,22 @@ export class ErrorMessages {
           case 'username': { message = required.username; } break;
           case 'firstname': { message = required.firstname; } break;
           case 'lastname': { message = required.lastname; } break;
-          case 'emailId': { message = required.emailId; } break;
-          case 'mobile': { message = required.mobile; } break;
+          case 'email': { message = required.email; } break;
+          case 'phone': { message = required.phone; } break;
           case 'password': { message = required.password; } break;
-          case 'confirmPassword': { message = required.confirmPassword; } break;
+          case 'confirm_password': { message = required.confirm_password; } break;
+          case 'terms_check': { message = required.terms_check; } break;
         }
       } else if (error.pattern) {
         const pattern = this.MSG.ERROR.PATTERN;
         switch (field) {
-          case 'emailId': { message = pattern.emailId; } break;
+          case 'email': { message = pattern.email; } break;
           case 'password': { message = pattern.password; } break;
         }
       } else if (error.minlength) {
         const minlength = this.MSG.ERROR.MINLENGTH;
         switch (field) {
-          case 'mobile': { message = minlength.mobile; } break;
+          case 'phone': { message = minlength.phone; } break;
         }
       }
       return message;

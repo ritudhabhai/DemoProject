@@ -7,7 +7,8 @@ export const messages = {
             email: 'Enter Email',
             phone: 'Enter Phone number',
             password: 'Enter Password',
-            confirmPassword: 'Enter Confirm Password',
+            confirm_password: 'Enter Confirm Password',
+            terms_check: 'Please accept terms & conditions to proceed',
         },
         PATTERN: {
             email: 'Enter Valid Email Address',

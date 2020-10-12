@@ -1,109 +1,80 @@
-<div class="cont">
-    <form #form="ngForm" (ngSubmit)="registeration(form, register)">
-        <div class="form pt-3 sign-in">
-            <h2>Create your Account,</h2>
-            <label>
-                <span>Username</span>
-                <input type="text" [ngClass]="((submitted || username.touched) && username.invalid)?'has-danger':''"
-                    name="username" #username=ngModel [(ngModel)]="register.username" autocomplete="off" required />
-            </label>
-            <div class="error-block m-l-160" *ngIf="((submitted || username.touched) && username.invalid)">
-                {{showErrorService.showError('username', username.errors)}}
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <label>
-                        <span>First Name</span>
-                        <input type="text"
-                            [ngClass]="((submitted || firstname.touched) && firstname.invalid)?'has-danger':''"
-                            name="firstname" #firstname=ngModel [(ngModel)]="register.firstname" autocomplete="off"
-                            required />
-                    </label>
-                    <div class="error-block pl-2" *ngIf="((submitted || firstname.touched) && firstname.invalid)">
-                        {{showErrorService.showError('firstname', firstname.errors)}}
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <label>
-                        <span>Last Name</span>
-                        <input type="text"
-                            [ngClass]="((submitted || lastname.touched) && lastname.invalid)?'has-danger':''"
-                            name="lastname" #lastname=ngModel [(ngModel)]="register.lastname" autocomplete="off"
-                            required />
-                    </label>
-                    <div class="error-block pl-2" *ngIf="((submitted || lastname.touched) && lastname.invalid)">
-                        {{showErrorService.showError('lastname', lastname.errors)}}
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <label>
-                        <span>Email</span>
-                        <input type="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-                            [ngClass]="((submitted || emailId.touched) && emailId.invalid)?'has-danger':''"
-                            name="emailId" #emailId=ngModel [(ngModel)]="register.emailId" autocomplete="off"
-                            required />
-                    </label>
-                    <div class="error-block pl-2" *ngIf="((submitted || emailId.touched) && emailId.invalid)">
-                        {{showErrorService.showError('emailId', emailId.errors)}}
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <label>
-                        <span>Mobile</span>
-                        <input type="text" [ngClass]="((submitted || mobile.touched) && mobile.invalid)?'has-danger':''"
-                            name="mobile" #mobile=ngModel [(ngModel)]="register.mobile"
-                            (keydown)="restrictKeyPressService.AllowNumbers($event)" minlength="10" maxlength="10"
-                            autocomplete="off" required />
-                    </label>
-                    <div class="error-block pl-2" *ngIf="((submitted || mobile.touched) && mobile.invalid)">
-                        {{showErrorService.showError('mobile', mobile.errors)}}
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <label>
-                        <span>Password</span>
-                        <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]$"
-                            [ngClass]="((submitted || password.touched) && password.invalid)?'has-danger':''"
-                            name="password" #password=ngModel [(ngModel)]="register.password" autocomplete="off"
-                            required />
-                    </label>
-                    <div class="error-block pl-2" *ngIf="((submitted || password.touched) && password.invalid)">
-                        {{showErrorService.showError('password', password.errors)}}
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <label>
-                        <span>Confirm Password</span>
-                        <input type="password"
-                            [ngClass]="((submitted || confirmPassword.touched) && confirmPassword.invalid)?'has-danger':''"
-                            name="confirmPassword" #confirmPassword=ngModel [(ngModel)]="register.confirmPassword"
-                            autocomplete="off" required />
-                    </label>
-                    <div class="error-block pl-2"
-                        *ngIf="((submitted || confirmPassword.touched) && confirmPassword.invalid)">
-                        {{showErrorService.showError('confirmPassword', confirmPassword.errors)}}
-                    </div>
-                </div>
-                <div class="error-block pl-2" *ngIf="showErrPassword && register.confirmPassword && register.password">
-                    Password & Confirm Password should be same
-                </div>
-            </div>
-            <button type="submit" class="submit">Register</button>
+<div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100 form_container">
+        <form #form="ngForm" (ngSubmit)="registeration(form, register)" class="login100-form" autocomplete="off">
+          <span class="login100-form-title upper_heading">Sign in or Create account</span>
+          <div class="row sign-in-options">
+              <div class="col-md-4 btn_option_container"><a [routerLink]="[URLConstants.LOGIN]" href="javascript:;" class="btn_option">Sign in</a></div>
+              <div class="col-md-4 btn_option_container"><a href="javascript:;" class="active btn_option">Create account</a></div>
+          </div>
+          <div class='wrap-input100 row form_heading'><div class="col-md-12"><h4>Sign in</h4></div></div>
+          <div class='form-group row container-login100-form-btn'>
+              <div class="col-md-6">
+                <label htmlFor="firstname">Legal first name</label>
+                <input type="text" placeholder="Enter legal first name" class="form-control" [ngClass]="((submitted || firstname.touched) && firstname.invalid)?'has-danger':''" name="firstname" #firstname="ngModel" [(ngModel)]="register.firstname" autocomplete="off" required />
+              </div>
+              <div class="col-md-6">
+                <label htmlFor="lastname">Legal last name</label>
+                <input type="text" placeholder="Enter legal last name" class="form-control" [ngClass]="((submitted || lastname.touched) && lastname.invalid)?'has-danger':''" name="lastname" #lastname="ngModel" [(ngModel)]="register.lastname" autocomplete="off" required />
+              </div>
+          </div>
+          <div class='form-group row container-login100-form-btn'>
+			<label htmlFor="Phone">Phone number</label>
+			<div class="col-md-12">
+			  <input class="form-control" placeholder="Enter phone number" type="phone" name="phone"
+				pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-+]\d{3}[\s.-]\d{4}$" autocomplete="on" [(ngModel)]="register.phone"
+				id="phone" required #phone="ngModel" [ngClass]="((submitted || phone.touched) && phone.invalid)?'has-danger':''"/>
+			</div>
+		</div>
+          <div class='form-group row container-login100-form-btn'>
+			<label htmlFor="Email">E-mail address</label>
+			<div class="col-md-12">
+			  <input class="form-control" placeholder="Enter e-mail" type="email" name="email"
+				pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" autocomplete="off" [(ngModel)]="register.email"
+				value="" id="email" required #email="ngModel" [ngClass]="((submitted || email.touched) && email.invalid)?'has-danger':''"/>
+			</div>
+		</div>
+        <div class='form-group row container-login100-form-btn'>
+              <label htmlFor="Password">Password:</label>
+              <div class="col-md-12">
+                <input class="form-control" placeholder="Enter password" type="password" name="password"
+                  [(ngModel)]="register.password" pattern="^(?=\D*\d)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z]).{8,30}$"  value="" autocomplete="off" id="password" required #password="ngModel"  [ngClass]="((submitted || password.touched) && password.invalid)?'has-danger':''" />
+              </div>
         </div>
-    </form>
-    <div class="sub-cont">
-        <div class="img">
-            <div class="img__text m--up">
-                <h2>One of us?</h2>
-                <p>If you already has an account, just sign in. We've missed you!</p>
+        <div class='form-group row container-login100-form-btn'>
+            <label htmlFor="Password">Confirm Password:</label>
+            <div class="col-md-12">
+              <input class="form-control" placeholder="Confirm password" type="password" name="confirm_password"
+                [(ngModel)]="register.confirm_password"  autocomplete="off" id="confirm_password" required
+                #confirm_password="ngModel"  [ngClass]="((submitted || confirm_password.touched) && confirm_password.invalid)?'has-danger':''" />
             </div>
-            <div class="img__btn" [routerLink]="[URLConstants.LOGIN]">
-                <span class="m--up">Login</span>
-            </div>
-        </div>
+      </div>
+      
+          <div class="container-login100-form-btn form_foot_data alert alert-danger" *ngIf="(submitted || (form.touched && !form.valid))">
+              <ul>
+                <li *ngIf="(firstname.invalid)"><span class="message_span" aria-hidden="true">&times;</span>{{showErrorService.showError('firstname', firstname.errors)}}</li>
+                <li *ngIf="(lastname.invalid)"><span class="message_span" aria-hidden="true">&times;</span>{{showErrorService.showError('lastname', lastname.errors)}}</li>
+                <li *ngIf="(phone.invalid)"><span class="message_span" aria-hidden="true">&times;</span>{{showErrorService.showError('phone', phone.errors)}}</li>
+                <li *ngIf="(email.invalid)"><span class="message_span" aria-hidden="true">&times;</span>{{showErrorService.showError('email', email.errors)}}</li>
+                <li *ngIf="(password.invalid)"><span class="message_span" aria-hidden="true">&times;</span>{{showErrorService.showError('password', password.errors)}}</li>
+                <li *ngIf="(confirm_password.invalid)"><span class="message_span" aria-hidden="true">&times;</span>{{showErrorService.showError('confirm_password', confirm_password.errors)}}</li>
+                <li *ngIf="showErrPassword && register.confirm_password && register.password"><span class="message_span" aria-hidden="true">&times;</span>Password doesn't match</li>
+                <li *ngIf="(terms_check.invalid)"><span class="message_span" aria-hidden="true">&times;</span>{{showErrorService.showError('terms_check', terms_check.errors)}}</li>
+              </ul>
+          </div>
+
+            <div class="w-full row">
+                <div class="col-md-2">
+			        <input class="form-control" height="auto" type="checkbox" name="terms_check"
+                [(ngModel)]="register.terms_check"  autocomplete="off" id="terms_check" required
+                #terms_check="ngModel"  [ngClass]="((submitted || terms_check.touched) && terms_check.invalid)?'has-danger':''" />
+                </div><div class="col-md-10">I agree to Privcy Policy & Terms & Conditions</div>
+		    </div>
+            
+          <div class="container-login100-form-btn form_foot_data">
+            <button class="login100-form-btn">Sign up</button>
+          </div>
+        </form>
+      </div>
     </div>
-</div>
+  </div>

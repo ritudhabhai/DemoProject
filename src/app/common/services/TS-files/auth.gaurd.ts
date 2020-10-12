@@ -43,7 +43,7 @@ export class CanAuthActivate implements CanActivate {
     if (this.localStorageService.getToken('accessToken')) {
       return true;
     }
-    this.router.navigate([this.URLConstants.HOMEPAGE]);
+    this.router.navigate([this.URLConstants.LOGIN]);
     return false;
   }
 }

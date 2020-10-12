@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   environmentName: 'dev',
   port: 5074,
-  apiUrl: 'https://ritu-indianic.cloudcms.net/',
+  apiUrl: 'https://api.cloudcms.net/',
 };
 
 /*

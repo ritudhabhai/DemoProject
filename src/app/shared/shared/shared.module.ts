@@ -3,9 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-// Plugins
-import { OwlModule } from 'ngx-owl-carousel';
-
 // Component
 import { FooterComponent } from '../components/footer/footer.component';
 import { HeaderComponent } from '../components/header/header.component';
@@ -20,13 +17,10 @@ import { HeaderComponent } from '../components/header/header.component';
     FormsModule,
     RouterModule,
     CommonModule,
-    OwlModule
   ],
   exports: [
     // Modules
     FormsModule,
-    OwlModule,
-
     // Components
     HeaderComponent,
     FooterComponent,

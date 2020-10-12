@@ -1,54 +1,52 @@
-<div class="cont">
-    <div class="form sign-in">
-        <h2>Welcome back,</h2>
-        <form #form="ngForm" (ngSubmit)="login(form, user)">
-            <label>
-                <span>Email</span>
-                <input type="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-                    [ngClass]="((submitted || email.touched) && email.invalid)?'has-danger':''" name="email"
-                    #email=ngModel [(ngModel)]="user.email" autocomplete="off" required />
-            </label>
-            <div class="error-block m-l-160" *ngIf="((submitted || email.touched) && email.invalid)">
-                {{showErrorService.showError('email', email.errors)}}
-            </div>
-            <label>
-                <span>Password</span>
-                <input type="password" [ngClass]="((submitted || password.touched) && password.invalid)?'has-danger':''"
-                    name="password" #password=ngModel [(ngModel)]="user.password" autocomplete="off" required />
-            </label>
-            <div class="error-block m-l-160" *ngIf="((submitted || password.touched) && password.invalid)">
-                {{showErrorService.showError('password', password.errors)}}
-            </div>
-            <p class="forgot-pass">Forgot password?</p>
-            <button type="submit" class="submit">Login</button>
-        </form>
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100 form_container">
+      <form #form="ngForm" (ngSubmit)="login(form, user)" class="login100-form">
+		<span class="login100-form-title upper_heading">Sign in or Create account</span>
+		<div class="row sign-in-options">
+        	<div class="col-md-4 btn_option_container"><a href="javascript:;" class="active btn_option">Sign in</a></div>
+			<div class="col-md-4 btn_option_container"><a [routerLink]="[URLConstants.REGISTER]" href="javascript:;" class="btn_option">Create account</a></div>
+		</div>
+		<div class='wrap-input100 row form_heading'><div class="col-md-12"><h4>Sign in</h4></div></div>
+		<div class='form-group row container-login100-form-btn'>
+			<label htmlFor="Email">E-mail address</label>
+			<div class="col-md-12">
+			  <input class="form-control" placeholder="Enter e-mail" type="email" name="email"
+				pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" autocomplete="on" [(ngModel)]="user.email"
+				value="" id="email" required #email="ngModel" [ngClass]="((submitted || email.touched) && email.invalid)?'has-danger':''"/>
+			</div>
+		</div>
+		<div class='form-group row container-login100-form-btn'>
+			<label htmlFor="Password">Password:</label>
+			<div class="col-md-12">
+				<div class="input-group">
+					<input class="form-control" placeholder="Enter password" [type]="passView ? 'text' : 'password'" name="password"
+						[(ngModel)]="user.password"  value="" autocomplete="on" id="password" required
+						#password="ngModel"  [ngClass]="((submitted || password.touched) && password.invalid)?'has-danger':''" />
+					<div class="input-group-append">
+						<span class="input-group-text">
+							<i *ngIf="!passView" class="fa fa-eye-slash" (click)="toggleView()"></i>
+							<i *ngIf="passView" class="fa fa-eye" (click)="toggleView()"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w-full">
+			<a class="txt2">Forgot Password?</a>
+		</div>
+		<div class="container-login100-form-btn form_foot_data alert alert-danger" *ngIf="(submitted || (form.touched && !form.valid) || !isServerValidated)">
+			<ul>
+				<li *ngIf="(email.touched && email.invalid)"><span class="message_span" aria-hidden="true">&times;</span>{{showErrorService.showError('email', email.errors)}}</li>
+				<li *ngIf="(password.touched && password.invalid)"><span class="message_span" aria-hidden="true">&times;</span>{{showErrorService.showError('password', password.errors)}}</li>
+				<li *ngIf="!isServerValidated && form.valid"><span class="message_span" aria-hidden="true">&times;</span>Invalid credentials. Please try again</li>
+			</ul>
+		</div>
 
-        <div class="text-center pt-4 pb-3">
-            <span class="txt1">
-                Or login with
-            </span>
+		<div class="container-login100-form-btn form_foot_data">
+          <button class="login100-form-btn">Sign in</button>
         </div>
-        <div class="flex-c p-b-112">
-            <a href="javascript:;" class="login100-social-item" (click)="socialLogin('facebook')">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a href="javascript:;" class="login100-social-item" (click)="socialLogin('goggle')">
-                <img src="assets/images/icon-google.png" alt="GOOGLE">
-            </a>
-            <a href="javascript:;" class="login100-social-item">
-                <i class="fa fa-linkedin"></i>
-            </a>
-        </div>
+      </form>
     </div>
-    <div class="sub-cont">
-        <div class="img">
-            <div class="img__text m--up">
-                <h2>New here?</h2>
-                <p>Sign up and discover great amount of new opportunities!</p>
-            </div>
-            <div class="img__btn" [routerLink]="[URLConstants.REGISTER]">
-                <span class="m--up">Register</span>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
