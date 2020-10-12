@@ -1,5 +1,5 @@
 {
-  "name": "angular-front-v9",
+  "name": "demo-project",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,11 +7,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run angular-front-v9:serve-ssr",
+    "dev:ssr": "ng run demo-project:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
-    "build": "ng build --prod && ng run angular-front-v9:server:production && node dist/server/main.js",
-    "staging": "ng build --configuration='staging' && ng run angular-front-v9:server:staging && node dist/server/main.js",
-    "prerender": "ng run angular-front-v9:prerender"
+    "build": "ng build --prod && ng run demo-project:server:production && node dist/server/main.js",
+    "staging": "ng build --configuration='staging' && ng run demo-project:server:staging && node dist/server/main.js",
+    "prerender": "ng run demo-project:prerender"
   },
   "private": true,
   "dependencies": {

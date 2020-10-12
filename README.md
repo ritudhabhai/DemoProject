@@ -1,13 +1,13 @@
-# Angular-Front-seed-v9 
+# Demo Project
 
 ## Prerequisite (Development)
 
 | Module      | Version |
 | ----------- | ------- |
 | Node        | 12.16.0 |
-| Npm         | 6.10.1  |
-| Angular-cli | 9.1.4   |
-| Angular     | 9.1.4   |
+| Npm         | 6.13.4  |
+| Angular-cli | 10.1.4   |
+| Angular     | 10.1.4   |
 
 
 ------------ 
